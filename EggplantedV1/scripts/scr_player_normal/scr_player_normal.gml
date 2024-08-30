@@ -318,11 +318,28 @@ function state_player_normal()
 	{
 		state = states.punch
 		image_index = 0
-		sprite_index = spr_player_breakdanceuppercut
+		sprite_index = spr_breakdanceuppercut
 		vsp = -14
 		movespeed = hsp
+		if ispeppino
+			vsp = -14;
+		else
+			vsp = -20;
+		movespeed = hsp;
+		scr_soundeffect(sfx_uppercut2)
 		particle_set_scale(particle.highjumpcloud2, xscale, 1)
 		create_particle(x, y, particle.highjumpcloud2, 0)
+		if !ispeppino
+		{
+			repeat 4
+			{
+				with (instance_create(x + irandom_range(-40, 40), y + irandom_range(-40, 40), obj_explosioneffect))
+				{
+					sprite_index = spr_shineeffect;
+					image_speed = 0.35;
+				}
+			}
+		}
 	}
 	switch character
 	{

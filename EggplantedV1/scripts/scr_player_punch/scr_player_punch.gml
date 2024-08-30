@@ -1,6 +1,6 @@
 function scr_player_punch()
 {
-	if (sprite_index == spr_player_breakdanceuppercut or sprite_index == spr_player_breakdanceuppercutend)
+	if (sprite_index == spr_breakdanceuppercut or sprite_index == spr_breakdanceuppercutend)
 	{
 		move = (key_left + key_right)
 		landAnim = 1
@@ -12,9 +12,9 @@ function scr_player_punch()
 			dir = move
 			movespeed = Approach(movespeed, (move * 4), 0.5)
 		}
-		if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_breakdanceuppercut)
-			sprite_index = spr_player_breakdanceuppercutend
-		if (grounded && vsp > 0 && (sprite_index == spr_player_breakdanceuppercut or sprite_index == spr_player_breakdanceuppercutend))
+		if (floor(image_index) == (image_number - 1) && sprite_index == spr_breakdanceuppercut)
+			sprite_index = spr_breakdanceuppercutend
+		if (grounded && vsp > 0 && (sprite_index == spr_breakdanceuppercut or sprite_index == spr_breakdanceuppercutend))
 		{
 			if (hsp != 0)
 			{
@@ -29,6 +29,14 @@ function scr_player_punch()
 		else
 		{
 			punch_afterimage = 5
+			if !ispeppino
+			{
+				with (instance_create(x, y, obj_explosioneffect))
+				{
+					sprite_index = spr_shineeffect;
+					image_speed = 0.35;
+				}
+			}
 			create_blue_afterimage(x, y, sprite_index, image_index, xscale)
 		}
 	}
