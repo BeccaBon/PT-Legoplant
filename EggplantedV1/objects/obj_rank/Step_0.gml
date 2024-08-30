@@ -30,7 +30,7 @@ if (global.collect >= global.collectN)
 		if (global.rank == "d")
 			sprite_index = spr_rankND
 		if (global.rank == "p")
-			sprite_index = spr_rankP
+			sprite_index = spr_rankNP
 	}
 }
 if (global.collectN > global.collect)

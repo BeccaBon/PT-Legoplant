@@ -48,6 +48,7 @@
     {"name":"inst_FD4EB9F4","path":"rooms/entrance_4/entrance_4.yy",},
     {"name":"inst_81F2276C","path":"rooms/entrance_4/entrance_4.yy",},
     {"name":"inst_06B595D4","path":"rooms/entrance_4/entrance_4.yy",},
+    {"name":"inst_60588CED","path":"rooms/entrance_4/entrance_4.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -93,6 +94,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_FD4EB9F4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cheeseslime","path":"objects/obj_cheeseslime/obj_cheeseslime.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1693.0,"y":114.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_81F2276C","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_cheeseslime","path":"objects/obj_cheeseslime/obj_cheeseslime.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":417.0,"y":306.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_06B595D4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_destroyable3","path":"objects/obj_destroyable3/obj_destroyable3.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":384.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_60588CED","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_forknight","path":"objects/obj_forknight/obj_forknight.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2144.0,"y":320.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_2","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":17,"SerialiseWidth":91,"TileCompressedData":[
 -182,0,2,60,61,-48,0,-2,204,-26,0,2,24,25,-11,0,2,80,81,-49,0,-2,204,-25,0,2,44,45,-4,0,2,20,21,-57,0,-2,204,-24,0,8,26,27,66,67,0,0,40,41,-6,0,2,64,65,-11,0,3,424,427,429,-37,0,1,204,-23,0,4,46,47,86,87,-10,0,2,84,85,-11,0,1,423,-40,0,1,204,-36,0,2,24,25,-11,0,1,

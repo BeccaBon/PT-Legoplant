@@ -13,6 +13,7 @@ if (floor(image_index) == (image_number - 1))
 	switch sprite_index
 	{
 		case spr_pizzaportal_appear:
+			scr_soundeffect(sfx_lapexit)
 			sprite_index = spr_pizzaportalentrancestart
 			break
 		case spr_pizzaportalentrancestart:
@@ -25,6 +26,7 @@ if (floor(image_index) == (image_number - 1))
 			active = 0
 			break
 		case spr_pizzaportal_disappear:
+			instance_create_unique(0, 0, obj_lap2visual);
 			instance_destroy()
 			break
 	}

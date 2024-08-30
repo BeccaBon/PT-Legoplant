@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 115.826,
+  "duration": 115.82694,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mu_noiseentrance",
   "type": 0,
-  "volume": 0.89,
+  "volume": 0.91,
 }

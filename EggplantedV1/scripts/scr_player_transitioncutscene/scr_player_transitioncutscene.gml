@@ -25,16 +25,19 @@ function scr_player_transitioncutscene()
 	{
 		if (grounded && x > (other.x + 32) && x < (other.x + 160) && key_up && (state == states.normal or state == states.mach1 or state == states.mach2 or state == states.mach3))
 		{
-			if (global.collect >= global.srank)
+			if ((global.collect >= global.srank) && global.lap && (global.secretfound >= 3) && global.treasure && (!global.combodropped))
+				global.rank = "p"
+			else if ((global.collect >= global.srank))
 				global.rank = "s"
-			else if (global.collect > global.arank)
+			else if ((global.collect > global.arank))
 				global.rank = "a"
-			else if (global.collect > global.brank)
+			else if ((global.collect > global.brank))
 				global.rank = "b"
-			else if (global.collect > global.crank)
+			else if ((global.collect > global.crank))
 				global.rank = "c"
 			else
 				global.rank = "d"
+
 			ini_open("saveData.ini")
 			if (!instance_exists(obj_endlevelfade))
 				instance_create(x, y, obj_endlevelfade)

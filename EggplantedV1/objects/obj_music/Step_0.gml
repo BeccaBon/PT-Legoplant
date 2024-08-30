@@ -27,9 +27,12 @@ if (prevpillar_on_camera != pillar_on_camera)
 }
 if global.panic
 {
-	if (music != mu_pizzatime && music != mu_finalescape)
+	if (music != mu_pizzatime && music != mu_finalescape && music != mu_noiseescape)
 	{
+		if obj_player1.ispeppino
 		music = mu_pizzatime
+		else
+		music = mu_noiseescape
 		audio_stop_sound(musicID)
 		musicID = scr_music(music)
 		if (pillarmusicID != -4)

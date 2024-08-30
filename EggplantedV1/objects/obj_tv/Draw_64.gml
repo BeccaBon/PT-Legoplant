@@ -98,7 +98,21 @@ if global.panic
 		surface_reset_target()
 		draw_surface(bar_surface, clip_x, clip_y)
 	}
-	draw_sprite(spr_timer_bar, -1, timer_x, timer_y)
-	draw_sprite(johnface_sprite, johnface_index, ((timer_x + 13) + _barpos), (timer_y + 20))
-	draw_sprite(pizzaface_sprite, pizzaface_index, (timer_x + 320), (timer_y + 10))
+    draw_sprite(spr_timer_bar, -1, timer_x, timer_y)
+    draw_sprite(johnface_sprite, johnface_index, ((timer_x + 13) + _barpos), (timer_y + 20))
+    draw_sprite(pizzaface_sprite, pizzaface_index, (timer_x + 320), (timer_y + 10))
+    var minutes = 0
+    for (var seconds = ceil((global.fill / 12)); seconds > 59; seconds -= 60)
+        minutes++
+    if ((seconds < 10))
+        seconds = concat("0", seconds)
+    else
+        seconds = string(seconds)
+    draw_set_halign(fa_center)
+    draw_set_valign(fa_middle)
+    draw_set_font(global.bigfont)
+    draw_text((timer_x + 153), (timer_y + 18), concat(minutes, ":", seconds))
 }
+draw_set_halign(fa_left)
+draw_set_valign(fa_top)
+

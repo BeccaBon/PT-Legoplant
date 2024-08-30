@@ -16,7 +16,16 @@ function scr_savescore(argument0)
 		global.rank = "c"
 	else
 		global.rank = "d"
-	scr_soundeffect(mu_rankd)
+	if (global.rank == "p") 
+		scr_soundeffect(mu_rankp)
+	else if (global.rank == "s")
+		scr_soundeffect(mu_ranks)
+	else if ((global.rank == "a"))
+		scr_soundeffect(mu_ranka)
+	else if ((global.rank == "b") || (global.rank == "c"))
+		scr_soundeffect(mu_rankb)
+	else if ((global.rank == "d"))
+    scr_soundeffect(mu_rankd)
 	audio_stop_sound(mu_pizzatime)
 	audio_stop_sound(mu_noiseescape)
 	audio_stop_sound(mu_dragonlair)

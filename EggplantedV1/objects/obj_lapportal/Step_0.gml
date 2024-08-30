@@ -8,6 +8,7 @@ if global.panic
 		{
 			if (other.playerid == noone && place_meeting(x, y, other))
 			{
+				scr_soundeffect(sfx_lapenter)
 				state = states.actor
 				visible = false
 				other.sprite_index = spr_pizzaportalend
@@ -30,6 +31,7 @@ if global.panic
 			image_speed = 0
 			if (!instance_exists(obj_fadeout))
 			{
+				global.collect += 3000
 				with (obj_player)
 				{
 					targetDoor = "LAP"

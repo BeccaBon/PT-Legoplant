@@ -4,9 +4,9 @@ if (image_alpha == 1)
 {
 	if (other.state != states.gotoplayer)
 	{
-		if audio_is_playing(sfx_collecttopping)
-			audio_stop_sound(sfx_collecttopping)
-		scr_soundeffect(sfx_collecttopping)
+		if audio_is_playing(sfx_bellcollectsmall)
+			audio_stop_sound(sfx_bellcollectsmall)
+		scr_soundeffect_pitched(sfx_bellcollectsmall)
 		if (obj_player1.character == "V")
 			global.playerhealth = clamp((global.playerhealth + 1), 0, 100)
 		global.heattime += 10

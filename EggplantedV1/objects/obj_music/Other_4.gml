@@ -49,3 +49,17 @@ if (room == rank_room)
 	secretmusicID = -4
 	pillarmusicID = -4
 }
+if (room == entrance_1 && !obj_player1.ispeppino && !global.panic)
+{
+	audio_stop_sound(musicID)
+	musicID = scr_music(mu_noiseentrance)
+}
+if (global.panic && global.lap && instance_exists(obj_lapportalentrance))
+{
+	audio_stop_sound(musicID)
+	if obj_player1.ispeppino
+	musicID = scr_music(mu_lap2)
+	else
+	musicID = scr_music(mu_lap2noise)
+}
+	

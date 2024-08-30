@@ -1,7 +1,10 @@
 if (player == 1)
 {
 	if (got && obj_player1.state != states.gottreasure)
+		{
+		global.collect += 3000
 		instance_destroy()
+		}
 }
 if (player == 2)
 {

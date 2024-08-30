@@ -1,3 +1,6 @@
+if !obj_player1.ispeppino
+exit
+
 x = playerid.x
 y = playerid.y
 if playerid.grounded
