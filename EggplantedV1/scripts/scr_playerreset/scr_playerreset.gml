@@ -3,6 +3,8 @@ function scr_playerreset()
 	trace("playerreset")
 	global.lap = 0
 	global.laps = 0
+	global.prank_enemykilled = false;
+	global.prank_cankillenemy = true;
 	global.secretfound = 0
 	with (obj_music)
 	{

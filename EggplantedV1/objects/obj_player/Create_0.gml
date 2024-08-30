@@ -7,6 +7,8 @@ global.throwarc = 1
 global.hidetiles = 0
 global.leveltosave = -4
 global.leveltorestart = -4
+global.enemykilled = 0;
+global.prank_cankillenemy = true;
 jetpackdash = 0
 flamecloud_buffer = 0
 rankpos_x = x
@@ -253,6 +255,9 @@ rocketsnd = -1
 superjumpholdsnd = -1
 superjumpprepsnd = -1
 suplexdashsnd = -1
+tornadosnd = -1
+machcancelsnd = -1
+airspinsnd = -1
 pogospeed = 2
 pogocharge = 100
 pogochargeactive = 0
@@ -355,6 +360,7 @@ noisedoublejump = false;
 coyote_time = 0;
 if (!variable_global_exists("saveroom"))
 {
+	global.prank_enemykilled = false
 	global.combodropped = 0
 	global.saveroom = ds_list_create()
 	global.escaperoom = ds_list_create()

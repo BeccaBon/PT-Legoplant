@@ -168,10 +168,11 @@ verticalhallway = 0
 box = 0
 if isgustavo
 	brick = 1
-if place_meeting(x, y, obj_exitgate)
+if (place_meeting(x, y, obj_exitgate))
 {
+	global.prank_cankillenemy = true;
 	with (instance_place(x, y, obj_exitgate))
-		other.x = x
+		other.x = x;
 }
 if (room == rank_room)
 {

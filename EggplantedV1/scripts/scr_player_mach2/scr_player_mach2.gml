@@ -46,10 +46,14 @@ function scr_player_mach2()
 		with (instance_create(x, y, obj_highjumpcloud2))
 			image_xscale = other.xscale
 		mort = 1
-		mortjump = 1
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 	{
+		if sprite_index == spr_playerN_skateboarddoublejump
+		{
+			sprite_index = spr_mach;
+			scr_soundeffect(sfx_skateboardland)
+		}
 		if (machpunchAnim == 0 && sprite_index != spr_mach && sprite_index != spr_mach1 && sprite_index != spr_mach4 && sprite_index != spr_player_machhit)
 		{
 			if (sprite_index != spr_player_machhit && sprite_index != spr_rollgetup && sprite_index != spr_suplexdash && sprite_index != spr_taunt && sprite_index != spr_player_Sjumpcancelstart)

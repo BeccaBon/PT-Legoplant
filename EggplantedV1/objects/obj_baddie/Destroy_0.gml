@@ -45,6 +45,14 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && ((!elite) or elitehit <= 
 }
 if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 {
+	if (global.prank_cankillenemy && !global.prank_enemykilled)
+	{
+		global.prank_enemykilled = true;
+		trace("P Rank started!");
+	}
+}
+if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
+{
 	if ((!elite) or elitehit <= 0)
 	{
 		with (obj_player1)

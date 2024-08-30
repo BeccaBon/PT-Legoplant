@@ -83,6 +83,7 @@ function scr_player_climbwall()
 				hsp = 0;
 				movespeed = 0;
 				image_index = 0;
+	            scr_soundeffect(sfx_skateboardjump)
 			}
 			if key_jump
 			{

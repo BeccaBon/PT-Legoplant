@@ -94,6 +94,53 @@ function scr_playersounds() //gml_Script_scr_playersounds
         }
         if (audio_is_playing(suplexdashsnd) && state != states.handstandjump)
             audio_stop_sound(suplexdashsnd)
+			        if (state == states.machcancel)
+        {
+            if (sprite_index == spr_playerN_wallbounce)
+            {
+                audio_stop_sound(tornadosnd)
+                if (!audio_is_playing(sfx_machcancel))
+                {
+                    machcancelsnd = audio_play_sound(sfx_machcancel, 1, false)
+                    sfx_gain(machcancelsnd)
+                }
+            }
+            else
+            {
+                audio_stop_sound(machcancelsnd)
+                if ((!grounded) && (!audio_is_playing(sfx_tornado)))
+                {
+                    audio_stop_sound(sfx_tornadoground)
+                    tornadosnd = audio_play_sound(sfx_tornado, 1, false)
+                    sfx_gain(tornadosnd)
+                }
+                if (grounded && (!audio_is_playing(sfx_tornadoground)))
+                {
+                    audio_stop_sound(sfx_tornado)
+                    tornadosnd = audio_play_sound(sfx_tornadoground, 1, false)
+                    sfx_gain(tornadosnd)
+                }
+            }
+        }
+        else
+        {
+            audio_stop_sound(tornadosnd)
+            audio_stop_sound(machcancelsnd)
+        }
+        if ((sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend) && (!audio_is_playing(sfx_airspinstart)) && (!audio_is_playing(sfx_airspin)))
+        {
+            airspinsnd = audio_play_sound(sfx_airspin, 1, false)
+            sfx_gain(airspinsnd)
+        }
+        else if (sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
+        {
+
+            audio_stop_sound(airspinsnd)
+            audio_stop_sound(sfx_airspinstart)
+        }
     }
 }
+
+
+
 

@@ -24,6 +24,11 @@ function scr_player_mach3()
 				movespeed += 0.1
 		}
 	}
+			if grounded && sprite_index == spr_playerN_skateboarddoublejump
+			{
+				sprite_index = spr_mach4;
+				scr_soundeffect(sfx_skateboardland)
+			}
 	mach2 = 100
 	momemtum = 1
 	move = (key_right + key_left)

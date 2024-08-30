@@ -28,7 +28,7 @@ var _maxX = (_cx + 59)
 combofill_x = lerp(combofill_x, (_minX + ((_maxX - _minX) * _perc)), 0.5)
 combofill_y = _cy
 shader_set(global.Pal_Shader);
-pal_swap_set(spr_tv_combofillpalette, (!global.combodropped) ? 2 : 1, false);
+pal_swap_set(spr_tv_combofillpalette, (!global.combodropped && global.prank_enemykilled) ? 2 : 1, false);
 draw_sprite(spr_tv_combobubblefill, combofill_index, combofill_x, combofill_y);
 draw_sprite(spr_tv_combobubble, -1, _cx, _cy)
 draw_set_font(global.combofont2)
