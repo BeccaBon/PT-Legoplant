@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sfx_machslideboostN.wav",
   "type": 0,
-  "volume": 0.61,
+  "volume": 0.39,
 }

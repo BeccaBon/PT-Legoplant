@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sfx_tornado.wav",
   "type": 0,
-  "volume": 0.91,
+  "volume": 0.72,
 }

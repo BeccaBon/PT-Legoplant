@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sfx_skateboardland.wav",
   "type": 0,
-  "volume": 0.89,
+  "volume": 0.72,
 }

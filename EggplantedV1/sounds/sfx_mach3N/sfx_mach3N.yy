@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sfx_mach3N.wav",
   "type": 0,
-  "volume": 0.96,
+  "volume": 0.72,
 }

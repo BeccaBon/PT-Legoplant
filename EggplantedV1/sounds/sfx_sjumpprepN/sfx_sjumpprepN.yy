@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sfx_sjumpprepN.wav",
   "type": 0,
-  "volume": 0.9,
+  "volume": 0.72,
 }

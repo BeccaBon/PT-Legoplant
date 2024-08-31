@@ -27,27 +27,40 @@ function scr_player_knightpepslopes()
 		if (grounded or (!doublejump))
 		{
 			vsp = -11
-			sprite_index = spr_knightpep_fly
+			sprite_index = spr_knightpepfly
 			image_index = 0
 			input_buffer_jump = 8
 			if (!grounded)
 			{
 				vsp = -11
 				doublejump = 1
-				sprite_index = spr_knightpep_doublejump
+				sprite_index = spr_knightpepdoublejump
 			}
 		}
 	}
-	if ((sprite_index == spr_knightpep_doublejump or sprite_index == spr_knightpep_fly) && floor(image_index) == (image_number - 1))
+	if ((sprite_index == spr_knightpepdoublejump or sprite_index == spr_knightpepfly) && floor(image_index) == (image_number - 1))
 		image_index = (image_number - 1)
 	if (scr_solid((x + sign(hsp)), y) && ((!scr_slope()) or place_meeting((x + sign(hsp)), (y - 2), obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_slope))) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))))
 	{
+		if ispeppino
+		{
 		movespeed = 0
 		vsp = -6
-		sprite_index = spr_knightpep_bump
+		sprite_index = spr_knightpepbump
 		image_index = floor((image_number - 1))
 		state = states.knightpepbump
 		scr_soundeffect(sfx_groundpound)
+		}
+		else
+		{
+			instance_create(x + (xscale * 35), y + 15, obj_bumpeffect);
+			repeat 6
+				create_debris(x + (xscale * 35), y + 15, spr_spark);
+			xscale *= -1;
+			sprite_index = spr_playerN_knightgroundbump;
+			image_index = 0;
+			scr_soundeffect(sfx_groundpound)
+		}
 	}
 	if scr_slope()
 	{
@@ -60,11 +73,11 @@ function scr_player_knightpepslopes()
 			}
 		}
 	}
-	if ((!grounded) && key_down2 && sprite_index != spr_knightpep_downtrust)
+	if ((!grounded) && key_down2 && sprite_index != spr_knightpepdowntrust)
 	{
 		with (instance_create(x, y, obj_parryeffect))
 			sprite_index = spr_knightpep_downcloud
-		sprite_index = spr_knightpep_downtrust
+		sprite_index = spr_knightpepdowntrust
 		vsp = -5
 		hsp = 0
 		movespeed = 0

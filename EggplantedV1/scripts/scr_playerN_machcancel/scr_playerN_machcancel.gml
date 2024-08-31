@@ -81,8 +81,8 @@ function scr_playerN_machcancel()
 		vsp = -7;
 		if move != 0
 			xscale = move;
-		//with (instance_create(x, y + 20, obj_noiseeffect))
-		//	sprite_index = spr_noisewalljumpeffect;
+		with (instance_create(x, y + 20, obj_noiseeffect))
+			sprite_index = spr_noisewalljumpeffect;
 		sprite_index = spr_playerN_wallbounce;
 		scr_soundeffect(sfx_skateboardjump)
 		GamepadSetVibration(0, 0.5, 0.5, 0.5);
@@ -100,9 +100,9 @@ function scr_playerN_machcancel()
 		state = states.mach3;
 		movespeed = 12;
 		sprite_index = spr_playerN_mach3;
-		//with (instance_create(x, y, obj_noiseeffect))
+		with (instance_create(x, y, obj_noiseeffect))
 		{
-			//sprite_index = spr_noisegrounddasheffect;
+			sprite_index = spr_noisegrounddasheffect;
 			image_xscale = other.xscale;
 		}
 		flash = true;
@@ -117,7 +117,7 @@ function scr_playerN_machcancel()
 		state = states.punch;
 		image_index = 0;
 		sprite_index = spr_player_breakdanceuppercut;
-		//fmod_event_instance_play(snd_uppercut);
+		scr_soundeffect(sfx_uppercut);
 		vsp = -21;
 		movespeed = hsp;
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
@@ -126,7 +126,7 @@ function scr_playerN_machcancel()
 		{
 			with (instance_create(x + irandom_range(-40, 40), y + irandom_range(-40, 40), obj_explosioneffect))
 			{
-				//sprite_index = spr_shineeffect;
+				sprite_index = spr_shineeffect;
 				image_speed = 0.35;
 			}
 		}
@@ -163,13 +163,13 @@ function scr_playerN_machcancel()
 	else
 	{
 		punch_afterimage = 5;
-		//instance_create(x + random_range(5, -5), y + random_range(20, -20), obj_tornadoeffect);
+		instance_create(x + random_range(5, -5), y + random_range(20, -20), obj_tornadoeffect);
 		if (grounded && (sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall))
 		{
-			//repeat 2
+			repeat 2
 			{
-				//with (instance_create(x + random_range(3, -3), y + 45, obj_noisedebris))
-				//	sprite_index = spr_noisedrilldebris;
+				with (instance_create(x + random_range(3, -3), y + 45, obj_noisedebris))
+				sprite_index = spr_noisedrilldebris;
 			}
 		}
 		create_noise_afterimage(x, y, sprite_index, image_index, xscale);

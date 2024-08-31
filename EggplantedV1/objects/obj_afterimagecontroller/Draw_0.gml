@@ -51,7 +51,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 				shd = true;
 				shader_set(shd_noise_afterimage);
 				var pal = 1;
-				if (obj_player1.paletteselect == 0)
+				if obj_player1.paletteselect == 0
 					pal = 5;
 				noise_aftimg_set_pal(obj_player1.spr_palette, obj_player1.paletteselect, pal);
 			}
