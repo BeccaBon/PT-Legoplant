@@ -172,7 +172,7 @@ function scr_playerN_machcancel()
 				//	sprite_index = spr_noisedrilldebris;
 			}
 		}
-		create_blue_afterimage(x, y, sprite_index, image_index, xscale);
+		create_noise_afterimage(x, y, sprite_index, image_index, xscale);
 	}
 	scr_dotaunt();
 }

@@ -9,6 +9,7 @@ global.leveltosave = -4
 global.leveltorestart = -4
 global.enemykilled = 0;
 global.prank_cankillenemy = true;
+usepalette = true;
 jetpackdash = 0
 flamecloud_buffer = 0
 rankpos_x = x
@@ -184,10 +185,10 @@ suplexhavetomash = 0
 anger = 0
 angry = 0
 baddiegrabbedID = 0
-spr_palette = spr_peppalette
-character = "P"
-scr_characterspr()
-paletteselect = 1
+spr_palette = spr_peppalette;
+character = "P";
+scr_characterspr();
+paletteselect = 1;
 colorchange = 0
 treasure_x = 0
 treasure_y = 0

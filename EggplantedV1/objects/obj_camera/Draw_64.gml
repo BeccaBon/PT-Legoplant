@@ -46,7 +46,7 @@ if (obj_player.state != states.gameover)
     var sh = sprite_get_height(spr_heatmeter_fill)
     var b = global.stylemultiplier
     var hud_xx = (121 + irandom_range((-collect_shake), collect_shake))
-    var hud_yy = ((90 + irandom_range((-collect_shake), collect_shake)) + hud_posY)
+    var hud_yy = ((70 + irandom_range((-collect_shake), collect_shake)) + hud_posY)
         draw_sprite_part(spr_heatmeter_fill, pizzascore_index, 0, 0, (sw * b), sh, (hud_xx - 95), (hud_yy + 24))
     shader_set(global.Pal_Shader)
     pal_swap_set(spr_heatmeter_palette, global.stylethreshold, 0)

@@ -65,6 +65,9 @@ switch state
 		}
 		if !obj_player1.ispeppino && global.panic
 			idlespr = spr_tv_exprpanicN;
+		else if global.combo >= 3 && !obj_player.isgustavo && !obj_player1.ispeppino
+			idlespr = spr_tv_exprcomboN;
+
 		var _state = obj_player1.state
 		if (_state == states.backbreaker or _state == states.chainsaw)
 			_state = obj_player1.tauntstoredstate
