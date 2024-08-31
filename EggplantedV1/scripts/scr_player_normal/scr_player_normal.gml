@@ -68,7 +68,7 @@ function state_player_normal()
 			else if mort
 				sprite_index = spr_player_mortwalk
 			else if key_up
-				sprite_index = spr_player_breakdance
+				sprite_index = spr_breakdance
 			else if (global.minutes == 0 && global.seconds == 0)
 				sprite_index = spr_hurtwalk
 			else if (global.stylethreshold == 2)
@@ -90,7 +90,7 @@ function state_player_normal()
 	}
 	else
 	{
-		if (sprite_index == spr_player_breakdance)
+		if (sprite_index == spr_breakdance)
 			image_speed = breakdance_speed
 		else
 			image_speed = 0.35
@@ -135,7 +135,7 @@ function state_player_normal()
 					else if mort
 						sprite_index = spr_player_mortidle
 					else if key_up
-						sprite_index = spr_player_breakdance
+						sprite_index = spr_breakdance
 					else if (global.minutes == 0 && global.seconds == 0)
 						sprite_index = spr_hurtidle
 					else if global.panic
@@ -153,7 +153,7 @@ function state_player_normal()
 					windingAnim--
 					sprite_index = spr_winding
 					if key_up
-						sprite_index = spr_player_breakdance
+						sprite_index = spr_breakdance
 				}
 			}
 			else
@@ -161,7 +161,7 @@ function state_player_normal()
 				windingAnim = 0
 				sprite_index = spr_facehurt
 				if key_up
-					sprite_index = spr_player_breakdance
+					sprite_index = spr_breakdance
 			}
 		}
 	}
@@ -282,7 +282,7 @@ function state_player_normal()
 			jumpAnim = 1
 		state = states.jump
 	}
-	if (sprite_index == spr_player_breakdance && breakdance_speed > 0.4)
+	if (sprite_index == spr_breakdance && breakdance_speed > 0.4)
 	{
 		if ((!instance_exists(dashcloudid)) && grounded)
 		{

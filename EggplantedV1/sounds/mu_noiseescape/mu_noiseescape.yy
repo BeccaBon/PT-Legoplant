@@ -10,14 +10,14 @@
   "bitRate": 320,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 205.584,
+  "duration": 205.54538,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
   },
   "preload": true,
   "sampleRate": 44100,
-  "soundFile": "mu_noiseescape.mp3",
+  "soundFile": "mu_noiseescape.ogg",
   "type": 1,
   "volume": 1.0,
 }

@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 4.109932,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "sfx_tornadoground.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.9,
 }

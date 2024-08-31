@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 1.158254,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "sfx_skateboardjump.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.89,
 }

@@ -271,7 +271,12 @@ function scr_characterspr()
         spr_backslide = spr_player_backslide
         spr_backslideland = spr_player_backslideland
         spr_breakdanceuppercut = spr_player_breakdanceuppercut
-        spr_breakdanceuppercutend = spr_player_breakdanceuppercutend
+        spr_breakdanceuppercutend = spr_player_breakdanceuppercutend		
+		spr_tv_hurt = spr_tv_exprhurt
+		spr_tv_mach3 = spr_tv_exprmach3
+		spr_tv_mach4 = spr_tv_exprmach4
+		spr_tv_heat = spr_tv_exprheat
+		spr_tv_combo = spr_tv_exprcombo
     }
     if (character == "N" || (character == "P" && !ispeppino))
     {
@@ -548,6 +553,11 @@ function scr_characterspr()
         spr_suplexcancel = spr_playerN_suplexcancel
         spr_mortthrow = spr_playerN_mortthrow
         spr_palette = spr_noisepalette
+		spr_tv_hurt = spr_tv_exprhurtN
+		spr_tv_mach3 = spr_tv_exprmach3N
+		spr_tv_mach4 = spr_tv_exprmach4N
+		spr_tv_heat = spr_tv_exprheatN
+		spr_tv_combo = spr_tv_exprcomboN
     }
     if (character == "V")
     {

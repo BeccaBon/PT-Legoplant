@@ -1,3 +1,4 @@
+scr_characterspr()
 if (room == Realtitlescreen or room == rm_eggplantdisclaimer or room == rank_room or room == rm_levelselect or room == timesuproom or room == boss_room1 or room == characterselect or room == hub_loadingscreen)
 {
 	visible = false
@@ -40,6 +41,13 @@ if (bubblespr != -4 && bubblespr != spr_tv_bubbleclosed)
 switch state
 {
 	case states.normal:
+		if !obj_player1.ispeppino
+		{
+			var spr = sprite_get_name(idlespr);
+			spr = asset_get_index(concat(spr, "N"));
+			if spr > -1
+				idlespr = spr;
+		}
 		idlespr = spr_tv_idle
 		if global.panic
 			idlespr = spr_tv_exprpanic;
@@ -55,7 +63,8 @@ switch state
 			if global.panic
 				idlespr = spr_tv_escapeG
 		}
-		
+		if !obj_player1.ispeppino && global.panic
+			idlespr = spr_tv_exprpanicN;
 		var _state = obj_player1.state
 		if (_state == states.backbreaker or _state == states.chainsaw)
 			_state = obj_player1.tauntstoredstate
@@ -169,15 +178,20 @@ switch state
 			with (obj_player1)
 			{
 				if (mach4mode == 1)
-					tv_do_expression(spr_tv_exprmach4)
+					tv_do_expression(spr_tv_mach4)
 				else if (state == states.mach3 or sprite_index == spr_mach3boost)
-					tv_do_expression(spr_tv_exprmach3)
+					tv_do_expression(spr_tv_mach3)
 				else if (state == states.hurt)
-					tv_do_expression(spr_tv_exprhurt)
+					tv_do_expression(spr_tv_hurt)
 				else if (state == states.ratmounthurt)
 					tv_do_expression(spr_tv_hurtG)
 				else if (global.stylethreshold >= 3 && (!obj_player.isgustavo))
-					idlespr = (spr_tv_exprheat)
+				{
+					if ispeppino
+						idlespr = (spr_tv_exprheat)
+					else
+						idlespr = (spr_tv_exprheatN)
+				}
 			}
 		}
 		switch sprite_index
@@ -320,6 +334,7 @@ switch state
 		switch expressionsprite
 		{
 			case spr_tv_exprhurt:
+			case spr_tv_exprhurtN:
 				if (obj_player1.state != states.hurt)
 				{
 					if (expressionbuffer > 0)
@@ -344,12 +359,13 @@ switch state
 				}
 				break
 			case spr_tv_exprcombo:
+			case spr_tv_exprcomboN:
 				if (global.combo < 3 || obj_player1.isgustavo || obj_player1.mach4mode || obj_player1.state == states.hurt || obj_player1.state == states.mach3 || obj_player1.sprite_index == obj_player1.spr_mach3boost || global.stylethreshold >= 3)
 				{
 					state = states.tv_whitenoise
 					expressionsprite = -4
 					if (obj_player1.state == states.hurt)
-						tv_do_expression(spr_tv_exprhurt)
+						tv_do_expression(spr_tv_hurt)
 				}
 				break
 			case spr_tv_exprcollect:
@@ -363,6 +379,7 @@ switch state
 				}
 				break
 			case spr_tv_exprmach3:
+			case spr_tv_exprmach3N:
 				with (obj_player1)
 				{
 					if (state != states.mach3 && (state != states.chainsaw or tauntstoredstate != states.mach3) && sprite_index != spr_mach3boost && mach4mode == 0)
@@ -371,10 +388,11 @@ switch state
 						other.expressionsprite = -4
 					}
 					if mach4mode
-						tv_do_expression(spr_tv_exprmach4);
+						tv_do_expression(spr_tv_mach4);
 				}
 				break
 			case spr_tv_exprmach4:
+			case spr_tv_exprmach4N:
 				with (obj_player1)
 				{
 					if (mach4mode == 0 && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)))
@@ -385,6 +403,7 @@ switch state
 				}
 				break
 			case spr_tv_exprheat:
+			case spr_tv_exprheatN:
 				_transfo = 0
 				with (obj_player1)
 				{

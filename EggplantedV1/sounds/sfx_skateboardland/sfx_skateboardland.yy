@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 0.07,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "sfx_skateboardland.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.89,
 }
