@@ -55,7 +55,30 @@ function scr_player_bombgrab()
 		}
 		if (sprite_index == spr_haulingjump && floor(image_index) == (image_number - 1))
 			sprite_index = spr_haulingfall
-		if key_slap2
+		if !ispeppino
+		{
+			if (place_meeting(x + hsp, y, obj_ratblock) || place_meeting(x, y + vsp, obj_ratblock))
+			{
+				with bombgrabID
+				{
+					hurtplayer = false;
+					x = other.x + hsp;
+					y = other.y + vsp;
+					instance_destroy();
+				}
+				pizzapepper = 0;
+				sprite_index = spr_rockethitwall;
+				scr_soundeffect(sfx_groundpound)
+				scr_soundeffect(sfx_bumpwall)
+				image_speed = 0.35;
+				flash = false;
+				state = states.bump;
+				hsp = -3.5 * xscale;
+				vsp = -6;
+				image_index = 0;
+			}
+		}
+		if key_slap2 && ispeppino
 		{
 			image_index = 0
 			if key_up

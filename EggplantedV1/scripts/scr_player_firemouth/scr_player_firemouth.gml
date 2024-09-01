@@ -74,6 +74,8 @@ function scr_player_firemouth()
 		sprite_index = spr_firemouth
 		dir = xscale
 	}
+	if !ispeppino && !grounded && key_jump2 && !jumpstop
+		vsp -= 0.25;
 	if (key_down2 && (!grounded))
 		vsp += 10
 	if (sprite_index != spr_firemouthintro && sprite_index != spr_firemouthend)
@@ -82,11 +84,16 @@ function scr_player_firemouth()
 		if grounded
 		{
 			doublejump = 0
-			if (move != 0)
+			if move != 0
 			{
-				if (movespeed <= 8)
-					movespeed += 0.5
-				xscale = move
+				if ispeppino
+				{
+					if movespeed <= 8
+						movespeed += 0.5;
+				}
+				else if movespeed <= 10
+					movespeed += 0.5;
+				xscale = move;
 			}
 			else
 				movespeed = Approach(movespeed, 0, 0.5)
@@ -99,31 +106,39 @@ function scr_player_firemouth()
 			if (hsp != 0)
 				sprite_index = spr_firemouth
 			else
-				sprite_index = spr_player_firemouthidle
+				sprite_index = spr_firemouthidle
 		}
-		else if (sprite_index != spr_player_firemouthdash)
+		else if (sprite_index != spr_firemouthdash)
 		{
 			dir = xscale
-			sprite_index = spr_player_firemouthspin
+			sprite_index = spr_firemouthspin
 			if (move != 0)
 			{
-				if (move != xscale)
+				if move != xscale
 				{
-					if (movespeed > 0)
-						movespeed -= 0.5
-					if (movespeed <= 0)
-						xscale = move
+					if movespeed > 0
+						movespeed -= 0.5;
+					if movespeed <= 0
+						xscale = move;
 				}
-				else if (movespeed < 8)
-					movespeed += 0.5
+				else if ispeppino
+				{
+					if movespeed <= 8
+						movespeed += 0.5;
+				}
+				else if movespeed <= 10
+					movespeed += 0.5;
 			}
 			if ((!doublejump) && key_slap2)
 			{
 				doublejump = 1
-				sprite_index = spr_player_firemouthdash
+				repeat 5
+					instance_create(x, y, obj_firemouthflame);
+				sprite_index = spr_firemouthdash
 				image_index = 0
 				if (move != 0)
 					xscale = move
+				//scr_soundeffect(sfx_fireassend)
 				dir = xscale
 				movespeed = 12
 			}
@@ -134,7 +149,7 @@ function scr_player_firemouth()
 			hsp = (xscale * movespeed)
 			vsp = 0
 			if (floor(image_index) == (image_number - 1))
-				sprite_index = spr_player_firemouthspin
+				sprite_index = spr_firemouthspin
 		}
 		if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_slope))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_tntblock))) && (!(place_meeting((x + hsp), y, obj_iceblock))) && (!(place_meeting((x + hsp), y, obj_ratblock))))
 			movespeed = 0
@@ -161,9 +176,20 @@ function scr_player_firemouth()
 	}
 	if (input_buffer_jump < 8 && grounded && sprite_index != spr_firemouthintro && sprite_index != spr_firemouthend)
 	{
+		scr_soundeffect(sfx_firemouthjump)
 		with (instance_create(x, y, obj_highjumpcloud2))
 			sprite_index = spr_player_firemouthjumpdust
+		repeat 5
+			instance_create(x, y, obj_firemouthflame);
 		vsp = -15
+			if !ispeppino
+		vsp = -12;
+	}
+	if sprite_index == spr_firemouthintro && image_index > 22 && firemouthflames == 0
+	{
+		repeat 10
+			instance_create(x, y, obj_firemouthflame);
+		firemouthflames = true;
 	}
 	if (sprite_index == spr_firemouth)
 	{
@@ -174,7 +200,7 @@ function scr_player_firemouth()
 		else
 			image_speed = 0.6
 	}
-	else if (sprite_index == spr_player_firemouthspin)
+	else if (sprite_index == spr_firemouthspin)
 	{
 		image_speed = (abs(vsp) / 10)
 		if (image_speed < 0.25)

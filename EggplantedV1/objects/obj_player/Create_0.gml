@@ -67,6 +67,7 @@ firemouth_dir = 1
 firemouth_max = 10
 firemouth_buffer = firemouth_max
 firemouth_afterimage = 0
+firemouthflames = false;
 cow_buffer = 0
 balloonbuffer = 0
 shoot_buffer = 0

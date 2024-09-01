@@ -138,6 +138,13 @@ function scr_playersounds() //gml_Script_scr_playersounds
             audio_stop_sound(airspinsnd)
             audio_stop_sound(sfx_airspinstart)
         }
+		if state == states.firemouth && sprite_index == spr_playerN_firemouthspin
+		{
+			if !audio_is_playing(sfx_noisefiremouth)
+					audio_play_sound(sfx_noisefiremouth,1,true)
+		}
+		else if audio_is_playing(sfx_noisefiremouth)
+			audio_stop_sound(sfx_noisefiremouth)
     }
 }
 
