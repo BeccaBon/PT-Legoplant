@@ -25,3 +25,11 @@ function get_dark(argument0, argument1)
 	else
 		return image_blend;
 }
+function draw_superslam_enemy()
+{
+	if (state == states.superslam && floor(image_index) >= 5 && floor(image_index) <= 7 && instance_exists(baddiegrabbedID))
+	{
+		with baddiegrabbedID
+			draw_enemy(global.kungfu, true);
+	}
+}

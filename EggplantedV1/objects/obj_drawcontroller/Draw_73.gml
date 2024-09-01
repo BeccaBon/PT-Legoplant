@@ -86,7 +86,6 @@ if (kidsparty_lightning or dark_lightning)
 			draw_set_alpha(0.8)
 			draw_rectangle(0, 0, cw, ch, false)
 			gpu_set_blendmode(bm_subtract)
-			draw_set_color(c_white)
 			for (var i = 0; i < 2; i++)
 			{
 				var _player = asset_get_index(concat("obj_player", (i + 1)))
