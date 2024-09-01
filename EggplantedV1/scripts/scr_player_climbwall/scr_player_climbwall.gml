@@ -73,8 +73,8 @@ function scr_player_climbwall()
 				wallspeed = 0
 			if !ispeppino && !skateboarding
 			{
-				//with (instance_create(x, y, obj_noiseeffect))
-				//	sprite_index = spr_noisewalljumpeffect;
+				with (instance_create(x, y, obj_noiseeffect))
+					sprite_index = spr_noisewalljumpeffect;
 				sprite_index = spr_playerN_wallbounce;
 				state = states.machcancel;
 				savedmove = xscale;

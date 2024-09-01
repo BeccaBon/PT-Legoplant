@@ -269,7 +269,8 @@ enum states
 	secret,
 	machcancelstart,
 	machcancel,
-	noisecrusher
+	noisecrusher,
+	animation
 }
 
 global.coop = false

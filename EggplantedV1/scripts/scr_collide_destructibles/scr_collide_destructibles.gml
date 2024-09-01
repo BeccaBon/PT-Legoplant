@@ -5,7 +5,7 @@ function scr_collide_destructibles()
 		var _obj_player = asset_get_index(concat("obj_player", (i + 1)))
 		with (_obj_player)
 		{
-					if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump)|| state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || (state == states.pogo && pogochargeactive == 1))
+					if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump)|| state == states.slipbanan || state == states.machcancel || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || (state == states.pogo && pogochargeactive == 1))
 			{
 				with (instance_place((x + xscale), y, obj_destructibles))
 				{
@@ -56,7 +56,7 @@ function scr_collide_destructibles()
 					instance_destroy()
 				}
 			}
-			if (state == states.trashroll or state == states.boxxedpepspin or ratmount_movespeed == 12 or state == states.ratmountpunch or state == states.ratmounttumble or state == states.punch or state == states.handstandjump or state == states.ratmountattack or state == states.lungeattack or state == states.cheeseball or state == states.bombpepside or state == states.rocket or state == states.shotgundash or state == states.faceplant or state == states.slipnslide or state == states.tacklecharge or sprite_index == spr_barrelroll or state == states.chainsawbump or state == states.mach3 or state == states.knightpep or state == states.machroll or state == states.knightpepslopes or state == states.knightpepattack or state == states.tumble or state == states.hookshot or state == states.shoulderbash)
+			if (state == states.trashroll or state == states.boxxedpepspin or ratmount_movespeed == 12 or state == states.ratmountpunch or state == states.ratmounttumble or state == states.punch or state == states.handstandjump or state == states.ratmountattack or state == states.lungeattack or state == states.cheeseball or state == states.bombpepside or state == states.rocket or state == states.shotgundash or state == states.faceplant or state == states.slipnslide or state == states.tacklecharge or sprite_index == spr_barrelroll or state == states.machcancel or state == states.chainsawbump or state == states.mach3 or state == states.knightpep or state == states.machroll or state == states.knightpepslopes or state == states.knightpepattack or state == states.tumble or state == states.hookshot or state == states.shoulderbash)
 			{
 				if place_meeting((x + hsp), y, obj_destructibles)
 				{
@@ -83,7 +83,7 @@ function scr_collide_destructibles()
 					}
 				}
 			}
-			if ((state == states.knightpep or sprite_index == spr_lonegustavo_groundpoundstart or sprite_index == spr_lonegustavo_groundpound or state == states.jetpackjump or state == states.noisejetpack or state == states.firemouth or state == states.slipbanan or state == states.superslam or state == states.hookshot or (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
+			if ((state == states.knightpep or sprite_index == spr_lonegustavo_groundpoundstart or state == states.machcancel or sprite_index == spr_lonegustavo_groundpound or state == states.jetpackjump or state == states.noisejetpack or state == states.firemouth or state == states.slipbanan or state == states.superslam or state == states.hookshot or (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
 			{
 				if place_meeting(x, (y + 1), obj_destructibles)
 				{
@@ -116,7 +116,7 @@ function scr_collide_destructibles()
 				}
 			}
 			ds_list_clear(global.instancelist)
-			if (vsp <= 0.5 && (state == states.jump or state == states.ratmountjump or state == states.mach3 or state == states.mach2 or state == states.antigrav or state == states.pogo or (state == states.bombpepup && bombup_dir == -1) or state == states.punch or state == states.climbwall or state == states.fireass or state == states.Sjump or state == states.cheeseballclimbwall or state == states.mach3 or (state == states.punch && (sprite_index == spr_breakdanceuppercut or sprite_index == spr_breakdanceuppercutend))))
+			if (vsp <= 0.5 && (state == states.jump or state == states.machcancel or state == states.ratmountjump or state == states.mach3 or state == states.mach2 or state == states.antigrav or state == states.pogo or (state == states.bombpepup && bombup_dir == -1) or state == states.punch or state == states.climbwall or state == states.fireass or state == states.Sjump or state == states.cheeseballclimbwall or state == states.mach3 or (state == states.punch && (sprite_index == spr_breakdanceuppercut or sprite_index == spr_breakdanceuppercutend))))
 			{
 				var vy = -1
 				if (state == states.punch && (sprite_index == spr_breakdanceuppercut or sprite_index == spr_breakdanceuppercutend))

@@ -529,6 +529,9 @@ switch state
 	case states.noisecrusher:
 		scr_player_noisecrusher();
 		break;
+	case states.animation:
+		scr_player_animation();
+		break;
 }
 if grounded && vsp > 0
 	coyote_time = 8;

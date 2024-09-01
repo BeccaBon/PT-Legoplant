@@ -67,7 +67,7 @@ if (elite && ragecooldown == 0)
 			alarm[4] = 5
 			state = states.rage
 			ragedash = 50
-			create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale)
+			create_red_afterimage(x, y, sprite_index, image_index, image_xscale)
 		}
 	}
 }

@@ -135,7 +135,15 @@ function state_player_jump()
 			}
 			particle_set_scale(particle.highjumpcloud2, xscale, 1)
 			create_particle(x, y, particle.highjumpcloud2, 0)
-		}
+	}
+	if key_jump2 && (character == "P" || character == "O" || character == "J") && !ispeppino && key_up && noisedoublejump && input_buffer_jump > 0 && !key_down && !key_attack
+	{
+		freefallstart = 0;
+		railmomentum = false;
+		if (place_meeting(x, y + 1, obj_railparent))
+			railmomentum = true;
+		scr_player_do_noisecrusher();
+	}
 		if (vsp > 0 && ((!key_attack) or sprite_index == spr_suplexbump))
 		{
 			scr_soundeffect(sfx_step)

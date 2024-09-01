@@ -312,8 +312,8 @@ function scr_characterspr()
         spr_backslideland = spr_playerN_fastroll
         spr_breakdance = spr_playerN_breakdancing
         spr_jetpackstart2 = spr_playerN_noisebombspinjump
-        //spr_catched = spr_playerN_catched
-        //spr_rampjump = spr_playerN_rampjump
+        spr_catched = spr_playerN_catched
+        spr_rampjump = spr_playerN_rampjump
         //spr_mrpinch = spr_playerN_mrpinch
         spr_breakdanceuppercut = spr_playerN_breakdanceuppercut
         spr_breakdanceuppercutend = spr_playerN_breakdanceuppercutend
@@ -397,7 +397,7 @@ function scr_characterspr()
         spr_knightpepcharge = spr_playerN_knightslide
         spr_knightpepfly = spr_playerN_knightfly
         spr_knightpepdoublejump = spr_playerN_knightdoublejumpfall
-        //spr_knightpepdowntrust = spr_playerN_knightdowntrust
+        spr_knightpepdowntrust = spr_playerN_knightdowntrust
         spr_knightpepupslope = spr_playerN_knightslideup
         //spr_knightpepbump = spr_playerN_knightbump
         spr_bodyslamstart = spr_playerN_bodyslamstart

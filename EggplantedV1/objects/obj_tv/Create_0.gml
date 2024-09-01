@@ -6,6 +6,7 @@ enum tvprompt
 }
 
 image_speed = 0.1
+tv_trans = 0;
 chose = 0
 message = ""
 showtext = 0
@@ -71,3 +72,6 @@ hand_index = 0
 bar_surface = -4
 barfill_x = 0
 showtime_buffer = 0
+spr_palette = spr_peppalette;
+paletteselect = 1;
+reset_palette = 0

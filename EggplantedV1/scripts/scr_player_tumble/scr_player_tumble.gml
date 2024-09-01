@@ -142,7 +142,7 @@ function scr_player_tumble()
 	}
 	if (grounded && vsp > 0 && !place_meeting(x, y, obj_bigcheese))
 		jumpstop = false;
-	if (input_buffer_jump > 0 && can_jump && state != states.bump && hsp != 0 && sprite_index == spr_tumble && !place_meeting(x, y, obj_pinballlauncher) && !place_meeting(x, y, obj_bigcheese))
+	if (key_jump2 && state != states.bump && hsp != 0 && sprite_index == spr_tumble && !place_meeting(x, y, obj_pinballlauncher) && !place_meeting(x, y, obj_bigcheese))
 	{
 		if (!scr_solid(x, y - 16))
 		{

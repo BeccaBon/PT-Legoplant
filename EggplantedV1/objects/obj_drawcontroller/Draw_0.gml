@@ -96,6 +96,17 @@ with (obj_heatafterimage)
 		draw_sprite_ext(obj_player1.sprite_index, obj_player1.image_index, x, y, obj_player1.xscale, obj_player1.yscale, 1, c_white, alpha)
 	}
 }
+with obj_noiseeffect
+{
+	pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+
+}
+with obj_noisedebris
+{
+	pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+}
 with (obj_player2)
 {
 	if (visible && bbox_in_camera(view_camera[0], 32))

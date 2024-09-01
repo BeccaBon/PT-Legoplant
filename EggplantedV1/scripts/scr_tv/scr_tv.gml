@@ -74,7 +74,16 @@ function tv_push_prompt_array(array)
 		}
 	}
 }
-
+function tv_get_palette()
+{
+	if (!instance_exists(obj_player1))
+		exit;
+	
+	spr_palette = obj_player1.spr_palette;
+	if obj_player1.isgustavo
+		spr_palette = spr_ratmountpalette;
+	paletteselect = obj_player1.paletteselect;
+}
 function tv_push_prompt_once(prompt, save_entry)
 {
 	with (obj_tv)

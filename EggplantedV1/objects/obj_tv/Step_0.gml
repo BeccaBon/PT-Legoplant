@@ -253,7 +253,7 @@ switch state
 				prompt_buffer = prompt_max
 				if (b[0] != "" && b[0] != -4)
 				{
-					bubblespr = 455
+					bubblespr = spr_tv_bubbleopen
 					bubbleindex = 0
 					prompt = b[0]
 					promptspd = b[3]
@@ -317,22 +317,23 @@ switch state
 		}
 		break
 	case states.tv_whitenoise:
-		sprite_index = spr_tv_whitenoise
-		if (noisebuffer > 0)
-			noisebuffer--
-		else
+		if (tv_trans >= sprite_get_number(spr_tv_whitenoise))
 		{
-			noisebuffer = noisemax
-			if (expressionsprite != -4)
+			if expressionsprite != -4
 			{
-				state = states.tv_expression
-				sprite_index = expressionsprite
+				if reset_palette
+				{
+					reset_palette = false;
+					tv_get_palette();
+				}
+				state = states.tv_expression;
+				sprite_index = expressionsprite;
 			}
 			else
-				state = states.normal
-			image_index = 0
+				state = states.normal;
+			image_index = 0;
 		}
-		break
+		break;
 	case states.tv_expression:
 		switch expressionsprite
 		{
@@ -430,13 +431,18 @@ switch state
 		}
 		break
 }
-
-var change_pos = 0
+if (state != states.tv_whitenoise && state != states.tv_expression && instance_exists(obj_player1))
+	tv_get_palette();
+if state != states.tv_whitenoise
+	tv_trans = 0;
+else
+	tv_trans += 0.35;
+var change_pos = false;
 if (obj_player.x > (room_width - 224) && obj_player.y < 187)
-	change_pos = 1
-if (bubblespr != -4 && obj_player.x > 316 && obj_player.y < 101)
-	change_pos = 1
-var spd = 15
+	change_pos = true;
+if bubblespr != -4 && obj_player.x > 316 && obj_player.y < 101
+	change_pos = true;
+var spd = 15;
 if change_pos
 	hud_posY = Approach(hud_posY, -300, spd)
 else

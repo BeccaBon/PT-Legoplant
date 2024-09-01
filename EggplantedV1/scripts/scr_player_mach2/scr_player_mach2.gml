@@ -180,7 +180,7 @@ function scr_player_mach2()
 			{
 				state = states.bump
 				image_index = 0
-				sprite_index = spr_player_wallsplat
+				sprite_index = spr_wallsplat
 			}
 		}
 	}
