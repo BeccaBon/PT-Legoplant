@@ -1,28 +1,27 @@
-if (room != kidsparty_entrance1)
+if room != kidsparty_entrance1
 {
-	var roomname = room_get_name(room)
-	roomname = string_letters(roomname)
-	if (roomname == "kidspartyfloor" or roomname == "kidspartyentrance")
+	var roomname = room_get_name(room);
+	roomname = string_letters(roomname);
+	if (room == tower_5 || roomname == "kidspartyfloor" || roomname == "kidspartyentrance" || roomname == "kidspartybasementsecret" || roomname == "kidspartysecret" || roomname == "streetbacon")
 	{
-		kidsparty_lightning = 1
-		dark_lightning = 0
+		kidsparty_lightning = true;
+		dark_lightning = false;
 	}
 	else
 	{
-		kidsparty_lightning = 0
-		dark_lightning = 0
+		kidsparty_lightning = false;
+		dark_lightning = false;
 	}
 }
 else
 {
-	kidsparty_lightning = 0
-	dark_lightning = 0
+	kidsparty_lightning = false;
+	dark_lightning = false;
 }
-if (room == dungeon_5 or room == dungeon_6)
+if (room == dungeon_5 || room == dungeon_6)
 {
-	use_dark = 1
-	for (var i = 0; i < array_length(dark_arr); i++)
-		layer_shader(dark_arr[i], 5)
+	use_dark = true;
+	dark_alpha = 1;
 }
 else
-	use_dark = 0
+	use_dark = false;

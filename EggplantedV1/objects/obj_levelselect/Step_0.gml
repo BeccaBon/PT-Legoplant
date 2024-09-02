@@ -1,7 +1,7 @@
 if !instance_exists(obj_option)
 {
 	scr_getinput()
-	if !instance_exists(obj_fadeout)
+	if !instance_exists(obj_fadeout) && instance_exists(obj_pause)
 	{
 		var _m = (key_down2 - key_up2)
 		selected_world += _m
@@ -22,7 +22,7 @@ if !instance_exists(obj_option)
 	if !active
 		exit;
 	
-	if key_jump2 && !instance_exists(obj_fadeout)
+	if key_jump2 && !instance_exists(obj_fadeout) && instance_exists(obj_pause)
 	{
 		var _levelinfo = level_array[selected_world][selected_level]
 		with obj_player

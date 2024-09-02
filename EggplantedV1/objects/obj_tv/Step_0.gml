@@ -67,6 +67,8 @@ switch state
 			idlespr = spr_tv_exprpanicN;
 		else if global.combo >= 3 && !obj_player.isgustavo && !obj_player1.ispeppino
 			idlespr = spr_tv_exprcomboN;
+		else if (global.stylethreshold >= 3 && (!obj_player.isgustavo && !obj_player1.ispeppino))
+			idlespr = spr_tv_exprheatN
 
 		var _state = obj_player1.state
 		if (_state == states.backbreaker or _state == states.chainsaw)
@@ -190,10 +192,8 @@ switch state
 					tv_do_expression(spr_tv_hurtG)
 				else if (global.stylethreshold >= 3 && (!obj_player.isgustavo))
 				{
-					if ispeppino
 						idlespr = (spr_tv_exprheat)
-					else
-						idlespr = (spr_tv_exprheatN)
+
 				}
 			}
 		}
@@ -373,6 +373,7 @@ switch state
 				}
 				break
 			case spr_tv_exprcollect:
+			case spr_tv_exprcollectN:
 			case spr_tv_happyG:
 				if (expressionbuffer > 0)
 					expressionbuffer--

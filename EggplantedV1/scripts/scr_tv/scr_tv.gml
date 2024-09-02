@@ -130,6 +130,7 @@ function tv_do_expression(spr)
 					expressionbuffer = 60
 					break
 				case spr_tv_exprcollect:
+				case spr_tv_exprcollectN:
 					expressionbuffer = 150
 					if obj_player.isgustavo
 						expressionsprite = spr_tv_happyG

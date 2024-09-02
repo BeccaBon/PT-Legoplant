@@ -16,5 +16,8 @@ if (other.state != states.gotoplayer)
 	create_collect(x, y, sprite_index)
 	with (instance_create((x + 16), y, obj_smallnumber))
 		number = string(val)
-	tv_do_expression(spr_tv_exprcollect)
+	if obj_player.ispeppino
+	tv_do_expression(spr_tv_exprcollect);
+	if !obj_player.ispeppino
+	tv_do_expression(spr_tv_exprcollectN);
 }
