@@ -10,6 +10,7 @@ global.leveltorestart = -4
 global.enemykilled = 0;
 global.prank_cankillenemy = true;
 usepalette = true;
+noisepizzapepper = 0
 jetpackdash = 0
 flamecloud_buffer = 0
 rankpos_x = x

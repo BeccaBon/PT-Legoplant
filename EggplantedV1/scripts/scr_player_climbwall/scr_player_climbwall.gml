@@ -99,7 +99,7 @@ function scr_player_climbwall()
 				jumpstop = 0
 				walljumpbuffer = 4
 			}
-			image_speed = 0.6
+			image_speed = wallspeed / 20
 			if (!instance_exists(obj_cloudeffect))
 				instance_create(x, (y + 43), obj_cloudeffect)
 			break

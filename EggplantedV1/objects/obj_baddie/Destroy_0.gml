@@ -77,6 +77,11 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 			vsp = random_range(-10, 10)
 		}
 	}
+			with (instance_create(x, y, obj_genericpoofeffect))
+		{
+			depth = other.depth
+			image_xscale = other.image_xscale
+		}
 	instance_create(x, y, obj_bangeffect)
 	with (obj_camera)
 	{

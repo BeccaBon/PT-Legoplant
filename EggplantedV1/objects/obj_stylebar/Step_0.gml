@@ -1,4 +1,4 @@
-visible = obj_tv.visible
+/*visible = obj_tv.visible
 switch global.stylethreshold
 {
 	case 0:

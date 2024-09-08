@@ -9,6 +9,7 @@
   "ResourceOrderSettings": [
     {"name":"spr_playerN_barrelroll","order":28,"path":"sprites/spr_playerN_barrelroll/spr_playerN_barrelroll.yy",},
     {"name":"spr_noisegrounddasheffect","order":7,"path":"sprites/spr_noisegrounddasheffect/spr_noisegrounddasheffect.yy",},
+    {"name":"scr_screensizer","order":1,"path":"scripts/scr_screensizer/scr_screensizer.yy",},
     {"name":"sfx_bellcollectbig","order":108,"path":"sounds/sfx_bellcollectbig/sfx_bellcollectbig.yy",},
     {"name":"sfx_airspinstart","order":114,"path":"sounds/sfx_airspinstart/sfx_airspinstart.yy",},
     {"name":"spr_noisewalljumpeffect","order":5,"path":"sprites/spr_noisewalljumpeffect/spr_noisewalljumpeffect.yy",},
@@ -129,6 +130,7 @@
     {"name":"spr_playerN_barrelidle","order":27,"path":"sprites/spr_playerN_barrelidle/spr_playerN_barrelidle.yy",},
     {"name":"mu_pause","order":131,"path":"sounds/mu_pause/mu_pause.yy",},
     {"name":"spr_playerN_barreljump","order":25,"path":"sprites/spr_playerN_barreljump/spr_playerN_barreljump.yy",},
+    {"name":"obj_tutorialbook","order":3,"path":"objects/obj_tutorialbook/obj_tutorialbook.yy",},
     {"name":"spr_tv_exprcomboN","order":3,"path":"sprites/spr_tv_exprcomboN/spr_tv_exprcomboN.yy",},
     {"name":"spr_playerN_divebombfall","order":2,"path":"sprites/spr_playerN_divebombfall/spr_playerN_divebombfall.yy",},
     {"name":"sfx_uppercut","order":122,"path":"sounds/sfx_uppercut/sfx_uppercut.yy",},
