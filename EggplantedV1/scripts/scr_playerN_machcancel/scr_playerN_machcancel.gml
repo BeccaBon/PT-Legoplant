@@ -84,7 +84,7 @@ function scr_playerN_machcancel()
 		with (instance_create(x, y + 20, obj_noiseeffect))
 			sprite_index = spr_noisewalljumpeffect;
 		sprite_index = spr_playerN_wallbounce;
-		scr_soundeffect(sfx_skateboardjump)
+		scr_soundeffect_pitched(sfx_skateboardjump,0.9,1.1)
 		GamepadSetVibration(0, 0.5, 0.5, 0.5);
 	}
 	if grounded && key_attack && vsp >= 0 && sprite_index == spr_playerN_wallbounce
