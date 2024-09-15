@@ -13,16 +13,16 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89b0b10d-8a87-43b4-8dbc-0af3e83326ce",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fd99716d-1520-4240-aedb-7456218207c3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02f56e61-bcfe-48e4-88d6-068818a92481",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bdcaaa30-8d9c-4475-90d2-b8d7218139c3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f6686380-b8db-4e42-b99e-141971b77745",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7e77a569-e7ab-480c-bc25-4008ea8c025f",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 115,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"697ff3be-612b-4335-ae53-19a78e9876e6","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c2d7de58-e027-45b9-96bc-00801d710c7c","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 1,
@@ -56,9 +56,9 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"89b0b10d-8a87-43b4-8dbc-0af3e83326ce","path":"sprites/spr_player_ratmountgroundpoundfall/spr_player_ratmountgroundpoundfall.yy",},},},"Disabled":false,"id":"4ad57e42-5dea-4b64-9c61-206794d14bf4","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fd99716d-1520-4240-aedb-7456218207c3","path":"sprites/spr_player_ratmountgroundpoundfall/spr_player_ratmountgroundpoundfall.yy",},},},"Disabled":false,"id":"b6c8e7d2-4d37-4635-a23a-6af6abe69a7b","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"02f56e61-bcfe-48e4-88d6-068818a92481","path":"sprites/spr_player_ratmountgroundpoundfall/spr_player_ratmountgroundpoundfall.yy",},},},"Disabled":false,"id":"55609388-43f0-4b59-8d37-a6bf5c0bce56","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bdcaaa30-8d9c-4475-90d2-b8d7218139c3","path":"sprites/spr_player_ratmountgroundpoundfall/spr_player_ratmountgroundpoundfall.yy",},},},"Disabled":false,"id":"c66776c3-249e-4411-9a7a-27ad5efc5b4f","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f6686380-b8db-4e42-b99e-141971b77745","path":"sprites/spr_player_ratmountgroundpoundfall/spr_player_ratmountgroundpoundfall.yy",},},},"Disabled":false,"id":"2fd4fe72-8c33-4d8e-86d7-62df1d9cb2b8","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7e77a569-e7ab-480c-bc25-4008ea8c025f","path":"sprites/spr_player_ratmountgroundpoundfall/spr_player_ratmountgroundpoundfall.yy",},},},"Disabled":false,"id":"2fca6b37-8c73-4869-89b9-e2f551cedbdf","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
