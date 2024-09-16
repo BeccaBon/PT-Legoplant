@@ -59,12 +59,12 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 			{
 				a = alpha;
 				b = get_dark(other.image_blend, obj_drawcontroller.use_dark, true, x, y);
-				if (instance_exists(playerid) && playerid.usepalette)
+				if (instance_exists(obj_player1) && obj_player1.usepalette)
 				{
 					shd = true;
 					shader_set(global.Pal_Shader);
-					if (playerid.object_index == obj_player1)
-					pal_swap_set(playerid.spr_palette, playerid.paletteselect, false);
+					if (obj_player1.object_index == obj_player1)
+					pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
 				}
 			}
 			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, b, a);

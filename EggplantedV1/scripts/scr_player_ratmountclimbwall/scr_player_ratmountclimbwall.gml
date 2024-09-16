@@ -26,6 +26,7 @@ function scr_player_ratmountclimbwall()
 			vsp = -14
 			ratmount_fallingspeed = 0
 			movespeed = (xscale * 10)
+			scr_soundeffect(sfx_guswalljump2)
 			sprite_index = spr_player_ratmountwalljump
 		}
 		else

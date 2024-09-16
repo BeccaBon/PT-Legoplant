@@ -42,6 +42,8 @@ icemomentum = 0
 savedicedir = 1
 ispeppino = 1
 isgustavo = 0
+gusdashpadbuffer = 0
+steppybuffer = 0;
 jumped = 1
 grav = 0.5
 hsp = 0
@@ -361,6 +363,9 @@ noisemachcancelbuffer = 0;
 noisewalljump = 0;
 noisedoublejump = false;
 coyote_time = 0;
+
+playerid = obj_player1
+
 if (!variable_global_exists("saveroom"))
 {
 	global.prank_enemykilled = false

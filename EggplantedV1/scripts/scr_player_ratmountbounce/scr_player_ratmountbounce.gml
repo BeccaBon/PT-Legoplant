@@ -71,7 +71,7 @@ function scr_player_ratmountbounce()
 		{
 			if (move != 0 && move == sign(hsp) && key_jump2)
 			{
-				//fmod_event_one_shot_3d("event:/sfx/ratmount/walljump1", x, y);
+				scr_soundeffect(sfx_guswalljump1)
 				state = states.ratmountclimbwall;
 				sticktime = 15;
 				xscale = sign(hsp);
@@ -109,7 +109,7 @@ function scr_player_ratmountbounce()
 				shake_mag = 10;
 				shake_mag_acc = 30 / room_speed;
 			}
-			//fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+			scr_soundeffect(sfx_groundpound)
 			sprite_index = spr_player_ratmountbounce;
 			image_index = 0;
 		}

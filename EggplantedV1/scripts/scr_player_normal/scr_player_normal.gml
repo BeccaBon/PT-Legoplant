@@ -80,16 +80,24 @@ function state_player_normal()
 		}
 		if (scr_solid((x + sign(hsp)), y) && (!(scr_solid_slope((x + sign(hsp)), y))) && xscale == move && (!(place_meeting(x, (y + 1), obj_slope))))
 			movespeed = 0
-		if ((!steppy) && character != "V" && (floor(image_index == 3) or floor(image_index) == 8))
+		if move != 0 && grounded && vsp > 0
 		{
-			create_particle(x, (y + 43), particle.cloudeffect, 0)
-			steppy = 1
+			if steppybuffer > 0
+				steppybuffer--;
+			else if sprite_index != spr_breakdance// && sprite_index != spr_pepdance && sprite_index != spr_noise_vulnerable2
+			{
+				create_particle(x, y + 43, particle.cloudeffect, 0);
+				steppybuffer = 12;
+				//if (place_meeting(x, y, obj_poodebris))
+					//fmod_event_one_shot_3d("event:/sfx/pep/stepinshit", x, y);
+				//else
+					scr_soundeffect(sfx_step)
+			}
 		}
-		if (floor(image_index) != 3 && floor(image_index) != 8)
-			steppy = 0
 	}
 	else
 	{
+		steppybuffer = 12;
 		if (sprite_index == spr_breakdance)
 			image_speed = breakdance_speed
 		else

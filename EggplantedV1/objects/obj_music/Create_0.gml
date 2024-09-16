@@ -37,7 +37,7 @@ room_arr = [
 	[badland_9, mu_ufo, mu_desertsecret, true], 
 	[badland_mart4, mu_ufo, mu_desertsecret, true], 
 	[badland_10, mu_desert, mu_desertsecret, true], 
-	[forest_1, mu_forest, mu_medievalsecret, false], 
+	[forest_1, mu_forestpep, mu_medievalsecret, false], 
 	[forest_G1, mu_forest, mu_medievalsecret, true], 
 	[forest_G1b, mu_gustavo, mu_medievalsecret, false], 
 	[forest_5, mu_forest, mu_medievalsecret, true], 
